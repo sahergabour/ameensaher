@@ -1,0 +1,43 @@
+h1 { 
+   text-align: center;
+   color:blue;
+   font-size :xx-large;
+   text-decoration: underline;
+  
+ }
+
+figure { 
+    text-align: center;
+
+ }
+
+ h3 { 
+    color: brown;
+    text-align: center;
+    font-size: large;
+    
+ }
+
+.index-h3 { 
+  text-align: right;
+  color: brown;
+  font-size: x-large;
+
+}
+
+li { 
+  text-align: right;
+  font-size: x-large;
+  color: brown;
+  text-decoration: underline;
+}
+
+.li-h1 { 
+  text-align: center;
+  color: brown;
+
+}
+body { 
+  background-color:lightblue ;
+}
+

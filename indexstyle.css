@@ -1,0 +1,27 @@
+h1 { 
+    text-align: center;
+    text-decoration: underline;
+    color: blue;
+    font-size:10mm;
+}
+
+h2 { 
+    text-align: center;
+    font-size: x-large;
+    color:brown;   
+}
+
+.t1 { 
+    text-align: center;
+    font-size: x-large;
+    
+}
+
+body { 
+    background-color:linen;
+}
+
+.li7 { 
+    text-align: right;
+    font-size: x-large;
+}

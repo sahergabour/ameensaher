@@ -1,0 +1,38 @@
+.tr1 { 
+    font-size: x-large;
+    color:saddlebrown;
+}
+
+.th1{ 
+    color: blue;
+    font-size: xx-large;
+    text-decoration: underline;
+}
+
+.ta1 { 
+    font-size: x-large;
+}
+
+body { 
+    background-color:lightblue ;
+}
+.a1 { 
+    color: green;
+}
+
+.td1{ 
+    text-decoration: underline;
+}
+
+.index-h3 { 
+    text-align: right;
+     color: brown;
+    font-size: x-large;
+
+}
+li { 
+    text-align: right;
+    color: brown;
+    font-size: x-large;
+
+  }

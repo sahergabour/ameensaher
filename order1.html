@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index1style.css">
+    <title>Page 1</title>
+
+
+
+
+    <script>
+        function cnt(a,b,c,d,e){
+            var dress= document.getElementsByName("dress");
+            var color= document.getElementsByName("color");
+            color = color[0].value;
+            var size= document.getElementsByName("size");
+            var logo= document.getElementsByName("logo");
+            var amount= document.getElementById("amount").value;
+            var pr=Number(0);
+            for(var i = 0 ;i < dress.length; i++){
+                    if(dress[i].checked){
+                       dress= dress[i].value;
+                        break;
+                    }
+            }
+
+            for(var i = 0 ;i < color.length; i++){
+                    if(color[i].checked){
+                       color= color[i].value;
+                        break;
+                    }
+            }
+
+            for(var i = 0; i < size.length; i++){
+                if(size[i].checked){
+                    size=size[i].value;
+                    break;
+                }  
+            }
+            
+            for(var i = 0; i < logo.length; i++){
+                if(logo[i].checked){
+                    pr+=Number(logo[i].value);
+                } 
+            }
+          
+
+        console.log(dress);
+        console.log(color);
+        console.log(size);
+        console.log(pr);
+        console.log(amount);
+
+        var calculate = Number(size)*(Number(dress)+Number(color)+Number(pr));
+        var result = Number(amount)*Number(calculate);
+        console.log(result);
+
+        printrResult(result);
+    
+        }
+        function printrResult(result){
+            var resultDiv= document.getElementById("resultDiv");
+            resultDiv.innerText =result;
+         
+        }
+    </script>
+
+
+
+
+<body>
+<form>
+     
+    <h1> קבוצת כדורגל ברצלונה </h1>
+
+    <h2>  :טופס להזמנת פריטי לבוש של קבוצת הספורט * </h2>
+
+    <img  src="Barcelona-Logo-700x394.png" width="200" height="100"  align="right">
+    <img  src="Barcelona-Logo-700x394.png" width="200" height="100" >
+
+    <table class="t1" style="width: 40% " border="6" align="center" > 
+        
+      
+        <tr>  <td >  <input type="text" name="number"  value="29760734"  style="text-align: center;" size="25" readonly> <td>  מספר הזמנה  </tr>
+       
+        <tr >  <td> <input type="text" name="name" placeholder="תרשום את שם הפרטי"  maxlength="20" size="25"> <td> שם פרטי  </tr>
+       
+        <tr>  <td><input type="text" name="name" placeholder="תרשום את שם המשפחה"  maxlength="20" size="25"> <td> שם משפחה  </tr>
+        
+        <tr>  <td><input type="radio" name="dress" value="10" checked> חולצה - 10
+                                       <BR><input type="radio" name="dress" value="10"> גופיה - 10
+                                        <BR><input type="radio" name="dress" value="20"> סוודר - 20
+                                            <BR><input type="radio" name="dress" value="30"> הודי/קופצ'ון - 30
+                                                <BR><input type="radio" name="dress" value="50"> מעיל - 50
+                                                              <td> סוג מלבוש  </tr>
+
+        <tr>  <td>  <SELECT NAME="color" SIZE=”4” style="font-size: large;"> 
+                                            <option id="red" name="color" value="0"> אדום - 0 </option>
+                                            <option id="green" name="color" value="5"> ירוק - (+5) </option>
+                                            <option id="blue" name="color" value="-2"> כחול - (-2) </option>
+                                            <option id="white" name="color" value="0" selected> לבן - 0 </option>
+
+                                            </select> 
+
+                                          <td> צבע </tr>
+        <tr> <td><input type="radio" name="size" value="0.9" > S - הנחה 10%
+                                     <BR><input type="radio" name="size" value="1"> M
+                                      <BR><input type="radio" name="size" value="1"> L
+                                       <BR><input type="radio" name="size" value="1.1"> XL - תוספת 10%
+                                          <td> גודל </tr>
+        <tr> <td><input type="checkbox" name="logo" value="3" > אחורה - 3
+                                     <BR><input type="checkbox" name="logo" value="3"> קדימה - 3
+                                       <BR><input type="checkbox" name="logo" value="3"> שרוול ימין - 3
+                                         <BR><input type="checkbox" name="logo" value="3"> שרוול שמאל - 3
+                                             <td> מיקום לוגו קבוצה  </tr>
+        <tr>  <td><textarea name="textarea1" cols=”30” rows=”10”></textarea>     <td> כתובת  </tr>
+
+        <tr>  <td> <input type="text" id="amount" name="amount" size="5"  value="1"> <td> כמות פריטים  </tr>
+
+        <tr>  <td> <input type="button" onclick="cnt()" name="calculate" value=" חשב מחיר " size="4"> <td> חשב מחיר </tr>
+        
+        <tr> <td> :מחיר <div id="resultDiv" > </div> <td> מחיר כולל </tr>
+
+        <tr> <td align="center" >  <input type="reset" name="reset" value="התחל מהתחלה " style="width: 90%">  </tr>
+
+        </form>
+    </table>
+    <table class="t1" style="width: 40% " border="3" align="center" >
+        <tr>  <td align="center"  > <form method="get" action="https://formspree.io/f/moqpkgzq" target="_blank" > 
+        <input type="submit" value="שלח הזמנה" style="width: 90%" >
+        </form>
+        </tr>
+        </table>
+
+    <img  src="Barcelona-Logo-700x394.png" width="200" height="100"  align="right">
+    <img  src="Barcelona-Logo-700x394.png" width="200" height="100" >
+
+    <li class="li7" ><a href="index.html">דף ראשי * </a></li> 
+</body>
+</html>
